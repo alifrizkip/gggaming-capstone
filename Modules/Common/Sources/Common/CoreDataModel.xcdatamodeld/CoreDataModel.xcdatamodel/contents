@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GameLocalEntity" representedClassName="GameLocalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="backgroundImage" attributeType="String"/>
+        <attribute name="descriptionString" attributeType="String"/>
+        <attribute name="descriptionStringRaw" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="rating" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="released" attributeType="String"/>
+        <relationship name="genres" toMany="YES" deletionRule="Cascade" destinationEntity="GenreLocalEntity" inverseName="game" inverseEntity="GenreLocalEntity"/>
+    </entity>
+    <entity name="GenreLocalEntity" representedClassName="GenreLocalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="slug" attributeType="String"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameLocalEntity" inverseName="genres" inverseEntity="GameLocalEntity"/>
+    </entity>
+    <elements>
+        <element name="GameLocalEntity" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="GenreLocalEntity" positionX="-54" positionY="-9" width="128" height="89"/>
+    </elements>
+</model>
