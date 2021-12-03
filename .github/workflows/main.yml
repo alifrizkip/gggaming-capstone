@@ -16,4 +16,4 @@ jobs:
     - name: Run List Simulator
       run: xcrun simctl list
     - name: Build iOS App
-      run: xcodebuild -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme "GGGamingCapstone (iOS)" -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+      run: xcodebuild -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme "GGGamingCapstone" -destination "platform=iOS Simulator,name=iPhone 13 Pro"
