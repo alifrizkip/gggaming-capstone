@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "GGGamingCore",
+        "repositoryURL": "https://github.com/alifrizkip/GGGamingCore",
+        "state": {
+          "branch": null,
+          "revision": "a3c2c133032aad4e383c9134838b57d20cb91b81",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {

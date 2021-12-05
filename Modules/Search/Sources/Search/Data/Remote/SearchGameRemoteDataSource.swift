@@ -11,7 +11,7 @@ import Combine
 import Alamofire
 import Foundation
 
-public struct SearchGameRemoteDataSource : DataSource {
+public struct SearchGameRemoteDataSource: DataSource {
   public typealias Request = String
   public typealias Response = [SearchGameResponse]
 

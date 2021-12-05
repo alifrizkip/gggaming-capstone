@@ -8,4 +8,8 @@
 import GGGamingCore
 import Common
 
-public typealias SearchInteractor = Interactor<String, [GameUIModel], SearchRepository<SearchGameRemoteDataSource, SearchTransformer>>
+public typealias SearchInteractor = Interactor<
+  String,
+  [GameUIModel],
+  SearchRepository<SearchGameRemoteDataSource, SearchTransformer>
+>

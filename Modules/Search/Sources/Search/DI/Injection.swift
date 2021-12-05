@@ -3,7 +3,7 @@
 //  
 //
 //  Created by alip on 30/11/21.
-//
+//  swiftlint:disable force_unwrapping
 
 import Swinject
 import GGGamingCore
@@ -12,7 +12,7 @@ import Common
 public class Injection {
   public static let shared = Injection()
 
-  let c = Container()
+  let container = Container()
 
   public init() {
     let endpoint = "/api/games"
@@ -22,11 +22,11 @@ public class Injection {
     let useCase = SearchInteractor(repository: repo)
     let presenter = SearchPresenter(useCase: useCase)
 
-    c.register(SearchInteractor.self) { _ in useCase }
-    c.register(SearchPresenter.self) { _ in presenter }
+    container.register(SearchInteractor.self) { _ in useCase }
+    container.register(SearchPresenter.self) { _ in presenter }
   }
 
   public func providePresenter() -> SearchPresenter {
-    c.resolve(SearchPresenter.self)!
+    container.resolve(SearchPresenter.self)!
   }
 }

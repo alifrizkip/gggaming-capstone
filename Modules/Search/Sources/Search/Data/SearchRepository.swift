@@ -10,21 +10,21 @@ import GGGamingCore
 import Combine
 
 public struct SearchRepository<
-  SearchRemoteDataSource: DataSource,
+  SearchRemoteDS: DataSource,
   Transformer: Mapper
 >: Repository
-where SearchRemoteDataSource.Request == String,
-      SearchRemoteDataSource.Response == [SearchGameResponse],
-      Transformer.Response == [SearchGameResponse],
-      Transformer.Domain == [SearchGameModel],
-      Transformer.Presentation == [GameUIModel] {
+where SearchRemoteDS.Request == String,
+  SearchRemoteDS.Response == [SearchGameResponse],
+  Transformer.Response == [SearchGameResponse],
+  Transformer.Domain == [SearchGameModel],
+  Transformer.Presentation == [GameUIModel] {
   public typealias Request = String
   public typealias Response = [GameUIModel]
 
-  private let remote: SearchRemoteDataSource
+  private let remote: SearchRemoteDS
   private let mapper: Transformer
 
-  public init(remote: SearchRemoteDataSource, mapper: Transformer) {
+  public init(remote: SearchRemoteDS, mapper: Transformer) {
     self.remote = remote
     self.mapper = mapper
   }
