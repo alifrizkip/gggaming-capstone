@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  GGGamingCapstone
+
+  Created by alip on 05/12/21.
+  
+*/
+// @FIXME:
+// I don't know why but this file should exist in app
+// If not, string localization inside Common package doesn't work properly (languange change doesn't work)

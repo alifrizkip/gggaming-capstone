@@ -32,14 +32,14 @@ struct SearchView: View {
             }
           } else {
             Spacer(minLength: 0)
-            BaseInfoView(icon: "gamecontroller", message: "No data")
+            BaseInfoView(icon: "gamecontroller", message: "no_data".toLocalized())
             Spacer(minLength: 0)
           }
         } else {
           Spacer(minLength: 0)
           BaseInfoView(
             icon: "exclamationmark.triangle",
-            message: presenter.errorMessage ?? "Something's went wrong",
+            message: presenter.errorMessage ?? "something_wrong".toLocalized(),
             color: .red
           )
           Spacer(minLength: 0)
@@ -71,7 +71,7 @@ extension SearchView {
         .font(.title3)
         .foregroundColor(.gray)
 
-      TextField("Search your most wanted game...", text: $presenter.keyword)
+      TextField("search_placeholder".toLocalized(), text: $presenter.keyword)
         .font(.headline)
         .onTapGesture {
           isTyping = true

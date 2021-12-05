@@ -59,7 +59,7 @@ struct HomeView: View {
 extension HomeView {
   var headerSection: some View {
     HStack {
-      Text("GGGaming")
+      Text("app_name".toLocalized())
         .font(.largeTitle)
         .fontWeight(.bold)
         .foregroundColor(Color("TextPrimary"))
@@ -93,7 +93,7 @@ extension HomeView {
 
   var genreFilterSection: some View {
     VStack(alignment: .leading) {
-      Text("Genres")
+      Text("genre".toLocalized())
         .font(.title2)
         .foregroundColor(Color("TextPrimary"))
         .padding(.top)
@@ -134,7 +134,7 @@ extension HomeView {
       Spacer(minLength: 0)
       BaseInfoView(
         icon: "exclamationmark.triangle",
-        message: presenter.errorMessage ?? "Something's went wrong",
+        message: presenter.errorMessage ?? "something_wrong".toLocalized(),
         color: .red
       )
       Spacer(minLength: 0)
@@ -146,7 +146,7 @@ extension HomeView {
   var emptyDataSection: some View {
     HStack {
       Spacer(minLength: 0)
-      BaseInfoView(icon: "gamecontroller", message: "No data")
+      BaseInfoView(icon: "gamecontroller", message: "no_data".toLocalized())
       Spacer(minLength: 0)
     }
     .padding(.top)
