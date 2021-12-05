@@ -14,8 +14,8 @@ public struct ListFavoriteRepository<
   Transformer: Mapper
 >: Repository
 where Transformer.Response == [GameLocalEntity],
-      Transformer.Domain == [FavoriteGameModel],
-      Transformer.Presentation == [GameUIModel] {
+  Transformer.Domain == [FavoriteGameModel],
+  Transformer.Presentation == [GameUIModel] {
   public typealias Request = String
   public typealias Response = [GameUIModel]
 

@@ -3,7 +3,7 @@
 //  
 //
 //  Created by alip on 03/12/21.
-//
+//  swiftlint:disable force_unwrapping
 
 import Swinject
 
@@ -11,9 +11,9 @@ import GGGamingCore
 import Common
 
 public class Injection {
-  public static let shared  = Injection()
+  public static let shared = Injection()
 
-  let c = Container()
+  let container = Container()
 
   public init() {
     let listFavMapper = ListFavoriteTransformer()
@@ -21,15 +21,15 @@ public class Injection {
     let listFavUseCase = ListFavoriteInteractor(repository: listFavRepo)
     let favPresenter = FavoritePresenter(useCase: listFavUseCase)
 
-    c.register(ListFavoriteInteractor.self) { _ in listFavUseCase }
-    c.register(FavoritePresenter.self) { _ in favPresenter }
+    container.register(ListFavoriteInteractor.self) { _ in listFavUseCase }
+    container.register(FavoritePresenter.self) { _ in favPresenter }
   }
 
-  public func provideUseCase() -> ListFavoriteInteractor  {
-    c.resolve(ListFavoriteInteractor.self)!
+  public func provideUseCase() -> ListFavoriteInteractor {
+    container.resolve(ListFavoriteInteractor.self)!
   }
 
   public func providePresenter() -> FavoritePresenter {
-    c.resolve(FavoritePresenter.self)!
+    container.resolve(FavoritePresenter.self)!
   }
 }
