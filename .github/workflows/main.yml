@@ -9,9 +9,13 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-11
 
     steps:
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
     - uses: actions/checkout@v2
     - name: Run List Simulator
       run: xcrun simctl list
