@@ -21,7 +21,7 @@ public struct FavoriteDataSource: LocaleDataSource {
   }
 
   public func get(id: Int) -> AnyPublisher<GameLocalEntity, Error> {
-    fatalError()
+    fatalError("not implemented")
   }
 
   public func isExist(id: Int) -> AnyPublisher<Bool, Error> {

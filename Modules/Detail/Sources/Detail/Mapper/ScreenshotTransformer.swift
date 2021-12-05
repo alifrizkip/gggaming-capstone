@@ -21,4 +21,3 @@ public struct ScreenshotTransformer: Mapper {
     domain.map { ScreenshotUIModel(id: $0.id, image: $0.image) }
   }
 }
-

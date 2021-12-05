@@ -12,7 +12,7 @@ import Foundation
 import GGGamingCore
 import Common
 
-public struct ScreenshotRemoteDataSource : DataSource {
+public struct ScreenshotRemoteDataSource: DataSource {
   public typealias Request = Int
   public typealias Response = [ScreenshotResponse]
 

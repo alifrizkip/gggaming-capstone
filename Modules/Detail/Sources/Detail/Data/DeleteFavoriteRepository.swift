@@ -3,7 +3,7 @@
 //  
 //
 //  Created by alip on 03/12/21.
-//
+//  swiftlint:disable force_unwrapping
 
 import Combine
 

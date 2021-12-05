@@ -12,7 +12,7 @@ import Foundation
 import GGGamingCore
 import Common
 
-public struct DetailGameRemoteDataSource : DataSource {
+public struct DetailGameRemoteDataSource: DataSource {
   public typealias Request = Int
   public typealias Response = DetailGameResponse
 

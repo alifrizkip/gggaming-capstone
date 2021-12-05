@@ -1,4 +1,3 @@
-
 //
 //  SearchTransformer.swift
 //  Search

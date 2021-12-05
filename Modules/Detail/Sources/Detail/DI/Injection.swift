@@ -3,7 +3,7 @@
 //  
 //
 //  Created by alip on 01/12/21.
-//
+//  swiftlint:disable force_unwrapping
 
 import Swinject
 
@@ -13,7 +13,7 @@ import Common
 public class Injection {
   public static let shared = Injection()
 
-  let c = Container()
+  let container = Container()
 
   public init() {
     // detail
@@ -22,7 +22,7 @@ public class Injection {
     let detailMapper = DetailTransformer()
     let detailRepo = GetDetailRepository(remote: detailRemote, mapper: detailMapper)
     let detailUseCase = GetDetailInteractor(repository: detailRepo)
-    c.register(GetDetailInteractor.self) { _ in detailUseCase }
+    container.register(GetDetailInteractor.self) { _ in detailUseCase }
 
     // screenshot
     let ssEndpoint = "/api/games"
@@ -30,41 +30,40 @@ public class Injection {
     let ssMapper = ScreenshotTransformer()
     let ssRepo = GetScreenshotsRepository(remote: ssRemote, mapper: ssMapper)
     let ssUseCase = GetScreenshotsInteractor(repository: ssRepo)
-    c.register(GetScreenshotsInteractor.self) { _ in ssUseCase }
+    container.register(GetScreenshotsInteractor.self) { _ in ssUseCase }
 
     // fav
     let addFavRepo = AddFavoriteRepository()
     let checkFavRepo = CheckFavoriteRepository()
     let deleteFavRepo = DeleteFavoriteRepository()
-    c.register(AddFavoriteInteractor.self) { _ in
+    container.register(AddFavoriteInteractor.self) { _ in
       AddFavoriteInteractor(repository: addFavRepo)
     }
-    c.register(CheckFavoriteInteractor.self) { _ in
+    container.register(CheckFavoriteInteractor.self) { _ in
       CheckFavoriteInteractor(repository: checkFavRepo)
     }
-    c.register(DeleteFavoriteInteractor.self) { _ in
+    container.register(DeleteFavoriteInteractor.self) { _ in
       DeleteFavoriteInteractor(repository: deleteFavRepo)
     }
   }
 
   public func provideDetailUseCase() -> GetDetailInteractor {
-    c.resolve(GetDetailInteractor.self)!
+    container.resolve(GetDetailInteractor.self)!
   }
 
   public func provideScreenshotUseCase() -> GetScreenshotsInteractor {
-    c.resolve(GetScreenshotsInteractor.self)!
+    container.resolve(GetScreenshotsInteractor.self)!
   }
 
   public func provideAddFavUseCase() -> AddFavoriteInteractor {
-    c.resolve(AddFavoriteInteractor.self)!
+    container.resolve(AddFavoriteInteractor.self)!
   }
 
   public func provideCheckFavUseCase() -> CheckFavoriteInteractor {
-    c.resolve(CheckFavoriteInteractor.self)!
+    container.resolve(CheckFavoriteInteractor.self)!
   }
 
   public func provideDeleteFavUseCase() -> DeleteFavoriteInteractor {
-    c.resolve(DeleteFavoriteInteractor.self)!
+    container.resolve(DeleteFavoriteInteractor.self)!
   }
 }
-

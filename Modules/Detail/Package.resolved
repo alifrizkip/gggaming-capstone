@@ -9,6 +9,33 @@
           "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
           "version": "5.4.4"
         }
+      },
+      {
+        "package": "GGGamingCore",
+        "repositoryURL": "https://github.com/alifrizkip/GGGamingCore",
+        "state": {
+          "branch": null,
+          "revision": "a3c2c133032aad4e383c9134838b57d20cb91b81",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "318e319998bf555c3e914d5c3adb6da05af86a32",
+          "version": "7.1.1"
+        }
+      },
+      {
+        "package": "Swinject",
+        "repositoryURL": "https://github.com/Swinject/Swinject.git",
+        "state": {
+          "branch": null,
+          "revision": "f10b6e9ebff440f985c43008f7c2d097639fcb81",
+          "version": "2.8.1"
+        }
       }
     ]
   },

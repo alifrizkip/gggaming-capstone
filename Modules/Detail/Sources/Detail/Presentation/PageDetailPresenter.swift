@@ -25,7 +25,7 @@ public class PageDetailPresenter: ObservableObject {
   @Published public var game: GameUIModel?
   @Published public var screenshots: [ScreenshotUIModel] = []
   @Published public var errorMessage: String?
-  @Published public var isLoading: Bool = false
+  @Published public var isLoading = false
   @Published public var isFavorite = false
   @Published public var isShowAlert = false
 
@@ -92,7 +92,9 @@ public class PageDetailPresenter: ObservableObject {
   }
 
   private func addFavorite() {
-    addFavUseCase.execute(request: game!)
+    guard let game = self.game else { return }
+
+    addFavUseCase.execute(request: game)
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { _ in }, receiveValue: { [self] result in
         self.checkFavorite()

@@ -11,22 +11,21 @@ import GGGamingCore
 import Common
 
 public struct GetScreenshotsRepository<
-  GetScreenshotsRemoteDataSource: DataSource,
+  GetSSRemoteDS: DataSource,
   Transformer: Mapper
 >: Repository
-where GetScreenshotsRemoteDataSource.Request == Int,
-      GetScreenshotsRemoteDataSource.Response == [ScreenshotResponse],
-      Transformer.Response == [ScreenshotResponse],
-      Transformer.Domain == [ScreenshotModel],
-      Transformer.Presentation == [ScreenshotUIModel] {
-
+where GetSSRemoteDS.Request == Int,
+  GetSSRemoteDS.Response == [ScreenshotResponse],
+  Transformer.Response == [ScreenshotResponse],
+  Transformer.Domain == [ScreenshotModel],
+  Transformer.Presentation == [ScreenshotUIModel] {
   public typealias Request = Int
   public typealias Response = [ScreenshotUIModel]
 
-  private let remote: GetScreenshotsRemoteDataSource
+  private let remote: GetSSRemoteDS
   private let mapper: Transformer
 
-  public init(remote: GetScreenshotsRemoteDataSource, mapper: Transformer) {
+  public init(remote: GetSSRemoteDS, mapper: Transformer) {
     self.remote = remote
     self.mapper = mapper
   }

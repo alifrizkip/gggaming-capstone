@@ -11,22 +11,21 @@ import GGGamingCore
 import Common
 
 public struct GetDetailRepository<
-  GetDetailRemoteDataSource: DataSource,
+  GetDetailRemoteDS: DataSource,
   Transformer: Mapper
 >: Repository
-where GetDetailRemoteDataSource.Request == Int,
-      GetDetailRemoteDataSource.Response == DetailGameResponse,
-      Transformer.Response == DetailGameResponse,
-      Transformer.Domain == DetailGameModel,
-      Transformer.Presentation == GameUIModel {
-
+where GetDetailRemoteDS.Request == Int,
+  GetDetailRemoteDS.Response == DetailGameResponse,
+  Transformer.Response == DetailGameResponse,
+  Transformer.Domain == DetailGameModel,
+  Transformer.Presentation == GameUIModel {
   public typealias Request = Int
   public typealias Response = GameUIModel
 
-  private let remote: GetDetailRemoteDataSource
+  private let remote: GetDetailRemoteDS
   private let mapper: Transformer
 
-  public init(remote: GetDetailRemoteDataSource, mapper: Transformer) {
+  public init(remote: GetDetailRemoteDS, mapper: Transformer) {
     self.remote = remote
     self.mapper = mapper
   }
