@@ -106,6 +106,7 @@ extension HomeView {
               withAnimation {
                 if selectedGenre != genre.slug {
                   presenter.getList(request: genre.slug)
+                  selectedGenre = genre.slug
                 }
               }
             } label: {
