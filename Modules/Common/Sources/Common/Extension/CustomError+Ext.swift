@@ -18,7 +18,7 @@ public enum URLError: LocalizedError {
     switch self {
     case .apiError: return "Failed get data"
     case .noData: return "No data"
-    case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable."
+    case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable"
     case .invalidEndpoint: return "Bad request"
     case .operationFailed: return "Operation failed"
     }

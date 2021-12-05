@@ -15,7 +15,7 @@ struct FavoriteView: View {
   var body: some View {
     VStack {
       HStack {
-        Text("My Wishlists")
+        Text("favorite_title".toLocalized())
           .font(.largeTitle)
           .padding(.top, 10)
 
@@ -36,14 +36,14 @@ struct FavoriteView: View {
             }
           } else {
             Spacer(minLength: 0)
-            BaseInfoView(icon: "gamecontroller", message: "No data")
+            BaseInfoView(icon: "gamecontroller", message: "no_data".toLocalized())
             Spacer(minLength: 0)
           }
         } else {
           Spacer(minLength: 0)
           BaseInfoView(
             icon: "exclamationmark.triangle",
-            message: presenter.errorMessage ?? "Something's went wrong",
+            message: presenter.errorMessage ?? "something_wrong".toLocalized(),
             color: .red
           )
           Spacer(minLength: 0)

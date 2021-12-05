@@ -15,6 +15,7 @@
 		C617DA562730DE040023B813 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C617DA552730DE040023B813 /* ContentView.swift */; };
 		C617DA582730DE060023B813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C617DA572730DE060023B813 /* Assets.xcassets */; };
 		C617DA5B2730DE060023B813 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C617DA5A2730DE060023B813 /* Preview Assets.xcassets */; };
+		C62B980C275CD6BE005A7F70 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C62B980E275CD6BE005A7F70 /* Localizable.strings */; };
 		C63A6F8827354E830059083A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6F8727354E830059083A /* HomeView.swift */; };
 		C63A6F9627355AD70059083A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C63A6F9527355AD70059083A /* Kingfisher */; };
 		C63A6F9C273564320059083A /* FeaturedGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A6F9B273564320059083A /* FeaturedGames.swift */; };
@@ -29,9 +30,8 @@
 		C63EFD322741CC3900116425 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EFD312741CC3900116425 /* EditProfileView.swift */; };
 		C640FF12275A6B8D006E45B8 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = C640FF11275A6B8D006E45B8 /* Favorite */; };
 		C640FF15275A803E006E45B8 /* GGGamingCore in Frameworks */ = {isa = PBXBuildFile; productRef = C640FF14275A803E006E45B8 /* GGGamingCore */; };
-		C66B00EB2745406400DE7321 /* FavoriteInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B00EA2745406400DE7321 /* FavoriteInteractorTest.swift */; };
-		C66B00EF2745497100DE7321 /* FavoriteRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66B00EE2745497100DE7321 /* FavoriteRepositoryMock.swift */; };
 		C675957F27591C4300DF0EB4 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = C675957E27591C4300DF0EB4 /* Profile */; };
+		C6B80083275D0EB800C23B03 /* GGGamingCapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B80082275D0EB800C23B03 /* GGGamingCapstoneTests.swift */; };
 		C6C40379273135670096A8D1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C6C40378273135670096A8D1 /* Alamofire */; };
 		C6C67F7A2743ED86007AF5F0 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = C6C67F792743ED86007AF5F0 /* AlertToast */; };
 		C6C67F7D2743FB68007AF5F0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C6C67F7C2743FB68007AF5F0 /* Swinject */; };
@@ -59,6 +59,8 @@
 		C617DA572730DE060023B813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C617DA5A2730DE060023B813 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C617DA5C2730DE060023B813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62B980D275CD6BE005A7F70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C62B980F275CD6C5005A7F70 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C63A6F8727354E830059083A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C63A6F9B273564320059083A /* FeaturedGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedGames.swift; sourceTree = "<group>"; };
 		C63A6FA427356E460059083A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -71,10 +73,9 @@
 		C63EFD262741BEFA00116425 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C63EFD312741CC3900116425 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		C640FF10275A6A91006E45B8 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Favorite; path = ../Modules/Favorite; sourceTree = "<group>"; };
-		C66B00EA2745406400DE7321 /* FavoriteInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractorTest.swift; sourceTree = "<group>"; };
-		C66B00EE2745497100DE7321 /* FavoriteRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepositoryMock.swift; sourceTree = "<group>"; };
 		C675957D27591B3400DF0EB4 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Profile; path = ../Modules/Profile; sourceTree = "<group>"; };
 		C675958027592D6400DF0EB4 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Modules/Home; sourceTree = "<group>"; };
+		C6B80082275D0EB800C23B03 /* GGGamingCapstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGGamingCapstoneTests.swift; sourceTree = "<group>"; };
 		C6C67F8227440762007AF5F0 /* GGGamingCapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGGamingCapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +175,7 @@
 			children = (
 				C617DA572730DE060023B813 /* Assets.xcassets */,
 				C617DA5C2730DE060023B813 /* Info.plist */,
+				C62B980E275CD6BE005A7F70 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -310,42 +312,9 @@
 		C6C67F8327440762007AF5F0 /* GGGamingCapstoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				C6C67F8B2744077A007AF5F0 /* Core */,
+				C6B80082275D0EB800C23B03 /* GGGamingCapstoneTests.swift */,
 			);
 			path = GGGamingCapstoneTests;
-			sourceTree = "<group>";
-		};
-		C6C67F8B2744077A007AF5F0 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C6C67F9227441544007AF5F0 /* Data */,
-				C6C67F8C27440782007AF5F0 /* Domain */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		C6C67F8C27440782007AF5F0 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				C6C67F8D2744078D007AF5F0 /* UseCase */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		C6C67F8D2744078D007AF5F0 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				C66B00EA2745406400DE7321 /* FavoriteInteractorTest.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		C6C67F9227441544007AF5F0 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				C66B00EE2745497100DE7321 /* FavoriteRepositoryMock.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +376,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					C617DA4F2730DE040023B813 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -424,6 +393,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				id,
 				Base,
 			);
 			mainGroup = C617DA472730DE040023B813;
@@ -450,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C617DA5B2730DE060023B813 /* Preview Assets.xcassets in Resources */,
+				C62B980C275CD6BE005A7F70 /* Localizable.strings in Resources */,
 				C617DA582730DE060023B813 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,8 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66B00EF2745497100DE7321 /* FavoriteRepositoryMock.swift in Sources */,
-				C66B00EB2745406400DE7321 /* FavoriteInteractorTest.swift in Sources */,
+				C6B80083275D0EB800C23B03 /* GGGamingCapstoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,11 +494,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		C62B980E275CD6BE005A7F70 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62B980D275CD6BE005A7F70 /* en */,
+				C62B980F275CD6C5005A7F70 /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		C617DA5D2730DE060023B813 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -590,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

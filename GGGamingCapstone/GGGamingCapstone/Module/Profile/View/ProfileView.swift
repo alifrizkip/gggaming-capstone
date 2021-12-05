@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Profile
+import Common
 
 struct ProfileView: View {
   @ObservedObject var presenter: Profile.ProfilePresenter
@@ -14,7 +15,7 @@ struct ProfileView: View {
   var body: some View {
     VStack(alignment: .center) {
       HStack {
-        Text("About me")
+        Text("profile_title".toLocalized())
           .font(.largeTitle)
           .padding(.top, 10)
 

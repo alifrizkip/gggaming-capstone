@@ -1,0 +1,1 @@
+./temp/swiftlint lint --strict --config ./com.raywenderlich.swiftlint.yml

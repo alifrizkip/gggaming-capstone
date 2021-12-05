@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Profile
+import Common
 
 struct EditProfileView: View {
   @ObservedObject var presenter: Profile.ProfilePresenter
@@ -14,7 +15,7 @@ struct EditProfileView: View {
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        Text("Update Profile")
+        Text("edit_profile_title".toLocalized())
           .font(.largeTitle)
           .padding(.top, 10)
 
@@ -24,36 +25,36 @@ struct EditProfileView: View {
 
       VStack {
         HStack {
-          Text("Name")
+          Text("name".toLocalized())
             .font(.body)
           Spacer(minLength: 0)
         }
 
-        TextField("Name", text: $presenter.name)
+        TextField("name".toLocalized(), text: $presenter.name)
           .textFieldStyle(RoundedBorderTextFieldStyle())
       }
       .padding(.bottom, 5)
 
       VStack {
         HStack {
-          Text("Github Username")
+          Text("github_username".toLocalized())
             .font(.body)
           Spacer(minLength: 0)
         }
 
-        TextField("Github Username", text: $presenter.githubUsername)
+        TextField("github_username".toLocalized(), text: $presenter.githubUsername)
           .textFieldStyle(RoundedBorderTextFieldStyle())
       }
       .padding(.bottom, 5)
 
       VStack {
         HStack {
-          Text("Email")
+          Text("email".toLocalized())
             .font(.body)
           Spacer(minLength: 0)
         }
 
-        TextField("Email", text: $presenter.email)
+        TextField("email".toLocalized(), text: $presenter.email)
           .textFieldStyle(RoundedBorderTextFieldStyle())
       }
       .padding(.bottom)
@@ -64,7 +65,7 @@ struct EditProfileView: View {
           presenter.isEdit.toggle()
         }
       } label: {
-        Text("Save")
+        Text("save".toLocalized())
           .foregroundColor(.white)
           .padding(.vertical, 8)
           .padding(.horizontal)

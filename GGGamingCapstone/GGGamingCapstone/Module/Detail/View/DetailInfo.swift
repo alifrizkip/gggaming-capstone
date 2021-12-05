@@ -76,7 +76,7 @@ struct DetailInfo: View {
         Button {
           withAnimation { isShowMore.toggle() }
         } label: {
-          Text(isShowMore ? "Hide" : "More")
+          Text(isShowMore ? "hide".toLocalized() : "more".toLocalized())
         }
       }
 

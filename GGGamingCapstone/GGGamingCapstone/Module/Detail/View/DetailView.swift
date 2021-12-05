@@ -44,7 +44,7 @@ struct DetailView: View {
       AlertToast(
         displayMode: .banner(.pop),
         type: presenter.isFavorite ? .complete(.green) : .error(.red),
-        title: presenter.isFavorite ? "Added to Wishlists" : "Removed from Wishlists"
+        title: presenter.isFavorite ? "add_favorite".toLocalized() : "remove_favorite".toLocalized()
       )
     }
   }
@@ -102,7 +102,7 @@ extension DetailView {
       Spacer(minLength: 0)
       BaseInfoView(
         icon: "exclamationmark.triangle",
-        message: presenter.errorMessage ?? "Something's went wrong",
+        message: presenter.errorMessage ?? "something_wrong".toLocalized(),
         color: .red
       )
       Spacer(minLength: 0)
