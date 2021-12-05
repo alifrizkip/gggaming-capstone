@@ -15,7 +15,7 @@ struct FavoriteView: View {
   var body: some View {
     VStack {
       HStack {
-        Text("My Wishlists")
+        Text("favorite_title".toLocalized())
           .font(.largeTitle)
           .padding(.top, 10)
 
