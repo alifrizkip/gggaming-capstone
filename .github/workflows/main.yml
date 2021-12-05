@@ -3,8 +3,6 @@ name: GGGamingCapstone
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   lint:
@@ -18,34 +16,34 @@ jobs:
         run: |
           sh ./scripts/lint.sh
 
-  # test:
-  #   runs-on: macos-11
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Install SSH key
-  #       uses: shimataro/ssh-key-action@v2
-  #       with:
-  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
-  #         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-  #     - name: Detail module unit test
-  #       run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme DetailTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
-  #     - name: Favorite module unit test
-  #       run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme FavoriteTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
-  #     - name: Home module unit test
-  #       run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme HomeTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
-  #     - name: Profile module unit test
-  #       run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme ProfileTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
-  #     - name: Search module unit test
-  #       run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme SearchTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+  test:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Detail module unit test
+        run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme DetailTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+      - name: Favorite module unit test
+        run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme FavoriteTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+      - name: Home module unit test
+        run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme HomeTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+      - name: Profile module unit test
+        run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme ProfileTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+      - name: Search module unit test
+        run: xcodebuild test -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme SearchTests -destination "platform=iOS Simulator,name=iPhone 13 Pro"
 
-  # build:
-  #   runs-on: macos-11
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Install SSH key
-  #       uses: shimataro/ssh-key-action@v2
-  #       with:
-  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
-  #         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-  #     - name: Build iOS App
-  #       run: xcodebuild -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme "GGGamingCapstone" -destination "platform=iOS Simulator,name=iPhone 13 Pro"
+  build:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Build iOS App
+        run: xcodebuild -project GGGamingCapstone/GGGamingCapstone.xcodeproj -scheme "GGGamingCapstone" -destination "platform=iOS Simulator,name=iPhone 13 Pro"
