@@ -14,10 +14,10 @@ public struct HomeRepository<
   Transformer: Mapper
 >: Repository
 where ListRemoteDataSource.Request == String,
-      ListRemoteDataSource.Response == [GameResponse],
-      Transformer.Response == [GameResponse],
-      Transformer.Domain == [GameModel],
-      Transformer.Presentation == [GameUIModel] {
+  ListRemoteDataSource.Response == [GameResponse],
+  Transformer.Response == [GameResponse],
+  Transformer.Domain == [GameModel],
+  Transformer.Presentation == [GameUIModel] {
   public typealias Request = String
   public typealias Response = [GameUIModel]
 
@@ -36,4 +36,3 @@ where ListRemoteDataSource.Request == String,
       .eraseToAnyPublisher()
   }
 }
-

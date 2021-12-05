@@ -11,7 +11,7 @@ import Combine
 import Alamofire
 import Foundation
 
-public struct GamesListRemoteDataSource : DataSource {
+public struct GamesListRemoteDataSource: DataSource {
   public typealias Request = String
   public typealias Response = [GameResponse]
 
@@ -43,4 +43,3 @@ public struct GamesListRemoteDataSource : DataSource {
     }.eraseToAnyPublisher()
   }
 }
-

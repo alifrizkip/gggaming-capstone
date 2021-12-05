@@ -8,4 +8,8 @@
 import GGGamingCore
 import Common
 
-public typealias HomeInteractor = Interactor<String, [GameUIModel], HomeRepository<GamesListRemoteDataSource, HomeTransformer>>
+public typealias HomeInteractor = Interactor<
+  String,
+  [GameUIModel],
+  HomeRepository<GamesListRemoteDataSource, HomeTransformer>
+>
