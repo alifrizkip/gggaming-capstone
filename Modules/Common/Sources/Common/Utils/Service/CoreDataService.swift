@@ -15,14 +15,14 @@ public class CoreDataService {
 
   public let model: NSManagedObjectModel = {
     guard let modelURL = Bundle.module.url(forResource: CoreDataService.name, withExtension: "momd"),
-          let model = NSManagedObjectModel(contentsOf: modelURL)
+      let model = NSManagedObjectModel(contentsOf: modelURL)
     else { fatalError("Can not find Core Data Model") }
     return model
   }()
 
   lazy var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: CoreDataService.name, managedObjectModel: model)
-    container.loadPersistentStores { (_, error) in
+    container.loadPersistentStores { _, error in
       guard let error = error as NSError? else { return }
       fatalError("Unresolved error: \(error), \(error.userInfo)")
     }
@@ -78,7 +78,7 @@ public class CoreDataService {
       if let dataToDelete = result.first {
         moc.delete(dataToDelete)
         try moc.save()
-        return true;
+        return true
       }
     } catch let err {
       print(err.localizedDescription)
@@ -87,7 +87,7 @@ public class CoreDataService {
     return false
   }
 
-  public func add(game: GameUIModel) -> Bool{
+  public func add(game: GameUIModel) -> Bool {
     let moc = persistentContainer.viewContext
     let genres: [GenreLocalEntity] = game.genres.map {
       let genre = GenreLocalEntity(context: moc)

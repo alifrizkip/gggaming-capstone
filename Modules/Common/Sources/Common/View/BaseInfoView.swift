@@ -31,4 +31,3 @@ public struct BaseInfoView: View {
     .foregroundColor(color)
   }
 }
-

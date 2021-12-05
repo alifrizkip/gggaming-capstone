@@ -21,4 +21,3 @@ public enum Helpers {
     return formatter.string(from: date)
   }
 }
-
