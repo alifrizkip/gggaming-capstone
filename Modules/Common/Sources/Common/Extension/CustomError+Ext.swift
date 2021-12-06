@@ -16,11 +16,12 @@ public enum URLError: LocalizedError {
 
   public var errorDescription: String? {
     switch self {
-    case .apiError: return "Failed get data"
-    case .noData: return "No data"
-    case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable"
-    case .invalidEndpoint: return "Bad request"
-    case .operationFailed: return "Operation failed"
+    case .apiError: return "failed_get_data".toLocalized()
+    case .noData: return "no_data".toLocalized()
+    case .addressUnreachable(let url):
+      return "\(url.absoluteString) \("is_unreachable".toLocalized())"
+    case .invalidEndpoint: return "bad_request".toLocalized()
+    case .operationFailed: return "operation_failed".toLocalized()
     }
   }
 }
@@ -31,8 +32,8 @@ public enum DatabaseError: LocalizedError {
 
   public var errorDescription: String? {
     switch self {
-    case .operationFailed: return "Operation failed"
-    case .noData: return "No data"
+    case .operationFailed: return "operation_failed".toLocalized()
+    case .noData: return "no_data".toLocalized()
     }
   }
 }
